@@ -1,0 +1,25 @@
+<h1 class="text-primary text-center m-4 fw-bold">Lista de usuarios </h1>
+
+<button  class="btn btn-success m-4 "><%= link_to "Crear usuario", admin_users_create_path%></button>
+<br>
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <th scope="row">1</th>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>     
+    </tr>
+     <% end %>
+  </tbody>
+</table>
